@@ -1,0 +1,652 @@
+<html lang="ko">
+    <head>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SHLH54V584&amp;cx=c&amp;gtm=4e59h0"></script>
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-121804461-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-121804461-1');
+        </script>
+        <script defer="">
+            var prefixPath = '/edu';
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+        <title id="titleId">사용기관 시스템</title>
+        <link rel="preload" href="https://www.lllcard.kr/font/biz2/KoPubWorld-Dotum-Light.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://www.lllcard.kr/font/biz2/KoPubWorld-Dotum-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://www.lllcard.kr/font/biz2/KoPubWorld-Dotum-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="https://www.lllcard.kr/css/biz2/reset.css?ver=20250919212951">
+        <!--<link rel="stylesheet" href="https://www.lllcard.kr/css/biz2/common.css?ver=20250919212951">-->
+        <link rel="stylesheet" href="css/biz2/layout.css">
+        <link rel="stylesheet" href="css/biz2/main.css">
+        <link rel="stylesheet" href="css/biz2/style.css">
+        <link rel="stylesheet" href="https://www.lllcard.kr/css/biz2/swiper-bundle.min.css">
+        <link rel="stylesheet" type="text/css" href="https://www.lllcard.kr/css/biz/jquery-ui.css">
+        <script src="https://www.lllcard.kr/js/base/jquery/jquery.1.8.2.min.js"></script>
+        <script src="https://www.lllcard.kr/js/biz2/swiper-bundle.min.js"></script>
+        <script src="https://www.lllcard.kr/js/base/jquery/form/jquery.form.js"></script>
+        <script src="https://www.lllcard.kr/js/base/jquery/url/jquery.url.packed.js"></script>
+        <script src="https://www.lllcard.kr/js/base/jquery/jquery-ui.js"></script>
+        <script src="https://www.lllcard.kr/js/base/displayTagAjax.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/base/trionsoft_v0.1.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/base/gibberish-aes.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/comm.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/validation.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/workSearch.js?ver=20250919212951"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/multiFile.js"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/popup.js"></script>
+        <script src="https://www.lllcard.kr/js/biz/comm/inputUtil.js"></script>
+        <script src="https://www.lllcard.kr/js/biz2/script.js?ver=20250919212951"></script>
+        <style type="text/css">
+            /* displaytag table header column width */
+            .col-w5 {
+                width: 5%;
+            }
+
+            .col-w10 {
+                width: 10%;
+            }
+
+            .col-w15 {
+                width: 15%;
+            }
+
+            .col-w20 {
+                width: 20%;
+            }
+
+            .col-w25 {
+                width: 25%;
+            }
+
+            .col-w30 {
+                width: 30%;
+            }
+
+            .col-w35 {
+                width: 35%;
+            }
+
+            .col-w40 {
+                width: 40%;
+            }
+
+            .col-w45 {
+                width: 45%;
+            }
+
+            .col-w50 {
+                width: 50%;
+            }
+
+            .col-w55 {
+                width: 55%;
+            }
+
+            .col-w60 {
+                width: 60%;
+            }
+
+            .col-w65 {
+                width: 65%;
+            }
+
+            .col-w70 {
+                width: 70%;
+            }
+
+            .col-w75 {
+                width: 75%;
+            }
+
+            .col-w80 {
+                width: 80%;
+            }
+
+            .col-w85 {
+                width: 85%;
+            }
+
+            .col-w90 {
+                width: 90%;
+            }
+
+            .col-w95 {
+                width: 95%;
+            }
+
+            .col-w100 {
+                width: 100%;
+            }
+        </style>
+        <script>
+            var zoomx = 100;
+            $(document).ready(function() {});
+            var getContextPath = "";
+
+            function actionLogout() {
+                document.selectOne.action = "/uat/uia/actionLogout.do";
+                document.selectOne.method = 'post';
+                document.selectOne.target = "_top";
+                document.selectOne.submit();
+            }
+
+            function fn_siteMapOpen() {
+                $(".sitemap").attr("tabindex", 0).show().focus().css('border', '1px dotted black');
+            }
+
+            function fn_siteMapClose() {
+                $(".sitemap").hide();
+                $("#sitemapBtn").focus();
+            }
+
+            function fnGoMain() {
+                this.location = '/edu/login.do';
+                /*
+                if('' == 'Y'){
+                	this.location = '/admin/login.do';
+                }else{
+                	//this.location = '/index.do';
+                	this.location = '/edu/login.do';
+                }
+                */
+            }
+            //폰트확대 
+            function FontPlus(uid) {
+                var l = document.getElementById(uid);
+                var nSize = l.style.fontSize ? l.style.fontSize : '12pt';
+                var iSize = parseInt(nSize.replace('pt', ''));
+                if (iSize < 20) {
+                    l.style.fontSize = (iSize + 1) + 'pt';
+                    l.style.lineHeight = '140%';
+                }
+            }
+            //폰트축소 
+            function FontMinus(uid) {
+                var l = document.getElementById(uid);
+                var nSize = l.style.fontSize ? l.style.fontSize : '12pt';
+                var iSize = parseInt(nSize.replace('pt', ''));
+                if (iSize > 6) {
+                    l.style.fontSize = (iSize - 1) + 'pt';
+                    l.style.lineHeight = '140%';
+                }
+            }
+            /**
+             * 팝업닫기 
+             */
+            function fnOpenModalMainClose() {
+                //선정여부 팝업
+                fnModalClose("dvSelectReqCheck");
+                $('#selectBtn').focus();
+            }
+            /*
+             * 모바일 버전으로 이동
+             */
+            function fn_goMobile() {
+                var expdate = new Date();
+                expdate.setTime(expdate.getTime() - 1); // 쿠키 삭제조건
+                document.cookie = "siteType=" + escape("") + "; path=/; expires=" + expdate.toGMTString();
+                this.location = "/main/mobileMainView.do";
+            }
+        </script>
+    </head>
+    <body class="useVc">
+        <!-- header s -->
+        <script type="text/javaScript" language="javascript" defer="defer"> $(document).ready(function () {
+	
+});
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i 
+															<ca.length; i++) {
+	  var c = ca[i];
+	  while (c.charAt(0) == ' ') {
+	    c = c.substring(1);
+	  }
+	  if (c.indexOf(name) == 0) {
+	    return c.substring(name.length, c.length);
+	  }
+	}
+	return "";
+}
+
+function pad(n, width) {
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
+}
+ 
+var objLeftTime;
+var objLeftTimePopup;
+var objClickInfo;
+var latestTime;
+var expireTime;
+var timeInterval = 1000; // 1초 간격 호출
+var firstLocalTime = 0;
+var elapsedLocalTime = 0;
+var stateExpiredTime = false;
+var stateExpiredPopupYn = false;
+//var logoutUrl = "/uat/uia/actionLogout.do";
+var timer;
+
+var synTimeInterval = 30000; // 60초 간격 호출
+var synTimer;
+
+function init() {
+	objLeftTime = document.getElementById("leftTimeInfo");
+	objLeftTimePopup = document.getElementById("leftTimeInfoPopup");
+	if (objLeftTime == null) {
+		console.log("'leftTimeInfo' ID is not exist!");
+		return;
+	}
+	objClickInfo = document.getElementById("clickInfo");
+	//console.log(objLeftTime.textContent);
+
+	latestTime = $("#latestTime").val();
+	expireTime = $("#expireTime").val();
+	
+	elapsedTime = 0;
+	firstLocalTime = (new Date()).getTime();
+	showRemaining();
+	
+	timer = setInterval(showRemaining, timeInterval); // 1초 간격 호출
+}
+
+function showRemaining() {
+	elapsedLocalTime = (new Date()).getTime() - firstLocalTime;
+	
+	var timeRemaining = expireTime - latestTime - elapsedLocalTime;
+	
+	if ( timeRemaining < timeInterval ) {
+		loginExpiredTimeCheck();
+		return;
+	}
+	var timeHour = Math.floor(timeRemaining/1000/60 / 60); 
+	var timeMin = Math.floor((timeRemaining/1000/60) % 60);
+	var timeSec = Math.floor((timeRemaining/1000) % 60);
+	//objLeftTime.textContent = pad(timeHour,2) +":"+ pad(timeMin,2) +":"+ pad(timeSec,2);
+	//objLeftTime.outerText = pad(timeHour,2) +":"+ pad(timeMin,2) +":"+ pad(timeSec,2);
+	objLeftTime.innerHTML = pad(timeMin,2) +":"+ pad(timeSec,2);//pad(timeHour,2) +":"+ 
+	if(timeRemaining < timeInterval + 60 * 1000) {
+		openSessionExpiredPopup();
+		objLeftTimePopup.innerHTML = pad(timeSec,2);
+	}else {
+		$("#openSessionExpiredPopup").hide();
+	}
+}
+
+function loginExpiredTimeCheck() {
+	$.ajax({
+	    url:'/uat/uia/loginExpiredTimeCheckAjax.do', //request 보낼 서버의 경로
+	    type:'get', // 메소드(get, post, put 등)
+	    data:{}, //보낼 데이터
+	    dataType : "json",
+	    success: function(response) {
+	      	if(response.data == 1) {
+	      		init();
+	      	}else {
+	      		clearInterval(timer);
+	        	objLeftTime.innerHTML = "00:00";
+	        	objLeftTimePopup.innerHTML = "00:00";
+	        	//objClickInfo.text = '시간만료'; //
+	        	stateExpiredTime = true;
+	        	// reload content main page
+	        	$("#sessionInfo").hide();
+	        	$("#openSessionExpiredPopup").hide();
+	        	actionLogout();
+	      	}
+	    },
+	    error: function(err) {
+	    	actionLogout();
+	    	console.log("err : "+err);
+	    }
+	});
+}
+
+function synExpiredTimeInit() {
+	synTimer = setInterval(synExpiredTime, synTimeInterval); // 1초 간격 호출
+}
+
+function synExpiredTime() {
+	$.ajax({
+	    url:'/uat/uia/synchronizationExpiredTimeAjax.do', //request 보낼 서버의 경로
+	    type:'get', // 메소드(get, post, put 등)
+	    data:{}, //보낼 데이터
+	    dataType : "json",
+	    success: function(response) {
+		$("#latestTime").val(response.data.latestTime);
+		$("#expireTime").val(response.data.expireTime);
+      	init();
+      	
+	    },
+	    error: function(err) {
+	    	console.log("err : "+err);
+	    }
+	});
+}
+
+function openSessionExpiredPopup() {
+	$("#openSessionExpiredPopup").show();
+}
+
+function reqTimeAjax() {
+  	if (stateExpiredTime==true) {
+  		alert('시간을 연장할수 없습니다.');
+  		return;
+  	}
+  	
+	$.ajax({
+	    url:'/uat/uia/refreshSessionTimeoutAjax.do', //request 보낼 서버의 경로
+	    type:'get', // 메소드(get, post, put 등)
+	    data:{}, //보낼 데이터
+	    dataType : "json",
+	    success: function(response) {
+        	$("#latestTime").val(response.data.latestTime);
+			$("#expireTime").val(response.data.expireTime);
+        	init();
+        	$("#openSessionExpiredPopup").hide();
+	    },
+	    error: function(err) {
+	    	console.log("err : "+err);
+	    }
+	});
+	return false;
+}
+
+// 로그아웃
+function actionLogout(){
+	document.selectOne.action = "/uat/uia/actionLogout.do";
+	document.selectOne.method = 'post';
+	document.selectOne.target = "_top";
+	document.selectOne.submit();
+}
+
+															</script>
+        <script>
+            /* var domainHref = window.location.host;
+		if(domainHref.indexOf("www") == -1){
+			location.href="https://www.lllcard.kr";
+		} */
+        </script>
+        <input type="hidden" id="sessionAuthorCode" name="sessionAuthorCode" value="ROLE_CERT_EDU">
+        <input type="hidden" id="latestTime" name="latestTime" value="">
+        <input type="hidden" id="expireTime" name="expireTime" value="">
+        <header>
+            <div class="logo-area">
+                <a href="javascript:fnGoMain()" style="cursor: pointer;">
+                    <img src="https://www.lllcard.kr/images/biz2/header_logo_2.png" alt="울산광역시">
+                </a>
+            </div>
+            <!-- <div class="logo-area"><a><img id="localLogo" src=""></a><a href="javascript:fnGoMain()"><img src="https://www.lllcard.kr/images/biz2/header_logo_2.png" alt="울산광역시" /></a></div> -->
+            <!-- <div class="logo-area multi-logo-area"><a><img id="localLogo" src=""></a><a href="javascript:fnGoMain()"><img src="https://www.lllcard.kr/images/biz2/header_logo_2.png" alt="울산광역시" /></a></div> -->
+            <div class="menu-area">
+                <!-- 			<a href="#" class="home-btn"></a> -->
+                <span class="log-info-txt log-info">
+                    <strong>이광운</strong>님 <a href="javascript:actionLogout()" style="cursor: pointer;">로그아웃</a>
+                </span>
+                <a href="https://www.lllcard.kr/edu/mber/mberJoinModCheck.do" class="log-info" style="cursor: pointer;">
+                    <span class="log-info-txt">담당자 정보 수정</span>
+                </a>
+                <button class="open-btn">
+                    <span class="blind">메뉴 열기</span>
+                </button>
+                <div class="menu-box">
+                    <ul class="link-group login">
+                        <!-- 로그인 후 일시 login 클래스 추가// -->
+                        <!-- Top Menu Loop -->
+                        <li>
+                            <span class="tit">사업안내</span>
+                            <div class="link-item">
+                                <!-- Sub Menu Loop -->
+                                <a href="javascript:fn_subPageMove('31100000','/guide/bizVcUser.do','사업안내')" class="" style="cursor: pointer;">평생교육이용권이란?</a>
+                                <a href="javascript:fn_subPageMove('31200000','/guide/useVcMethod.do','사업안내')" class="" style="cursor: pointer;">평생교육이용권 사용하기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tit">이용권 사용기관</span>
+                            <div class="link-item">
+                                <!-- Sub Menu Loop -->
+                                <a href="javascript:fn_subPageMove('32200000','/orgReq/organReqView.do','이용권 사용기관')" class="" style="cursor: pointer;">사용기관 등록 신청 현황</a>
+                                <a href="javascript:fn_subPageMove('32300000','/edu/educationList.do','이용권 사용기관')" class="" style="cursor: pointer;">교육과정 정보</a>
+                                <a href="javascript:fn_subPageMove('32700000','/org/organView.do','이용권 사용기관')" class="" style="cursor: pointer;">기관정보 관리</a>
+                                <a href="javascript:fn_subPageMove('32800000','/vcUseAmt/eduVcUseDetailList.do','이용권 사용기관')" class="" style="cursor: pointer;">이용권 사용내역</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="tit">게시판</span>
+                            <div class="link-item">
+                                <!-- Sub Menu Loop -->
+                                <a href="javascript:fn_subPageMove('33100000','/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000071','게시판')" class="" style="cursor: pointer;">공지사항</a>
+                                <a href="javascript:fn_subPageMove('33200000','/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000011','게시판')" class="" style="cursor: pointer;">자료실</a>
+                                <a href="javascript:fn_subPageMove('33300000','/faq/FaqListInqire.do','게시판')" class="" style="cursor: pointer;">자주하는 질문</a>
+                                <a href="javascript:fn_subPageMove('33400000','/org/selectBoardList.do?bbsId=BBSMSTR_000000000051','게시판')" class="" style="cursor: pointer;">온라인 상담</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="close-btn">
+                        <span class="blind">메뉴 닫기</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- location info -->
+        <!-- header e -->
+        <div class="container wrap" style="min-height: calc(-439px + 100vh);">
+            <!-- content start -->
+            <!-- 			<a href="#" id="aSubCont" class="menuHidden" tabindex="-1">본문시작</a> -->
+            <script type="text/javascript">
+                var authCd = "ROLE_CERT_EDU";
+                // 공지사항 더보기
+                function fn_move_notice() {
+                    fn_subPageMove('7708000', '/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000071', '게시판');
+                }
+                // 공지사항 클릭
+                function fn_board_Move(nttId, menuNo, bbsId) {
+                    var vUrl = "/cop/bbs/selectBoardArticle.do";
+                    /* if (authCd == "ROLE_SUPER_ADMIN" || authCd == "ROLE_ADMIN" || authCd == "ROLE_CALL") {
+                    	vUrl = "/admin/board/selectBoardArticle.do";
+                    	if (menuNo == "7701000")
+                    		menuNo = "8801000";
+                    	else if (menuNo == "7708000")
+                    		menuNo = "8814000";
+                    }else if(authCd == "ROLE_LOCAL_ADMIN"){
+                    	vUrl = "/localAdmin/board/selectBoardArticle.do";
+                    	menuNo = "9807000";
+                    }else{
+                    	vUrl = "/cop/bbs/selectBoardArticle.do";
+                    } */
+                    document.selectTwo.menuNo.value = menuNo;
+                    document.selectTwo.topMenuNm.value = "게시판";
+                    document.selectTwo.nttId.value = nttId;
+                    document.selectTwo.bbsId.value = bbsId;
+                    document.selectTwo.action = prefixPath + vUrl;
+                    document.selectTwo.submit();
+                }
+                // 기관정보관리 클릭
+                function onClickOrganInfoMngBtn() {
+                    if (authCd == "ROLE_CERT_EDU") { // 인증된 교육기관
+                        fn_subPageMove('32700000', '/org/organView.do', '이용권 사용기관');
+                    } else { // 미인증 교육기관(ROLE_EDU)
+                        //alert("사용기관 등록 신청 승인 후 이용 가능합니다.");
+                        fn_subPageMove('32200000', '/orgReq/organReqView.do', '이용권 사용기관')
+                    }
+                }
+                // 이용권 사용내역 클릭
+                function onClickVoucherUsageBtn() {
+                    if (authCd == "ROLE_CERT_EDU") { // 인증된 교육기관
+                        alert("이용권 사용내역이 없습니다.");
+                    } else { // 미인증 교육기관(ROLE_EDU)
+                        alert("사용기관 등록 신청 승인 후 이용 가능합니다.");
+                    }
+                }
+                // 질의응답
+                function onClickOnlineCounsel() {
+                    if (authCd == "ROLE_CERT_EDU") { // 인증된 교육기관
+                        fn_subPageMove('33400000', '/org/selectBoardList.do?bbsId=BBSMSTR_000000000051', '게시판');
+                    } else { // 미인증 교육기관(ROLE_EDU)
+                        alert("사용기관 등록 신청 승인 후 이용 가능합니다.");
+                    }
+                }
+            </script>
+            <!-- <div class="main">메인일시 .main//
+	<div class="container wrap"> -->
+            <div class="main-info-content">
+                <div class="link-area">
+                    <div class="link-box">
+                        <div class="link login-btn">
+                            <p class="agency-info">(영업중지)서울_트라이언_테스트2</p>
+                            <p class="agency-info user-name">
+                                <span class="col-pri">이광운</span>님, 환영합니다.
+                            </p>
+                        </div>
+                        <button class="tikcet-btn link" onclick="onClickOrganInfoMngBtn()">
+                            <span class="txt">기관정보 관리</span>
+                        </button>
+                        <button class="use-btn link" onclick="fn_subPageMove('32300000','/edu/educationList.do','이용권 사용기관');">
+                            <span class="txt">교육과정 정보</span>
+                        </button>
+                    </div>
+                    <div class="notice-box">
+                        <span class="title">공지사항</span>
+                        <div class="banner-group">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="javascript:fn_board_Move('13196','7708000','BBSMSTR_000000000071');" style="cursor: pointer;">
+                                            <span class="txt"> 알림톡 및 문자 발송 서비스 일시 중단 안내(8.19 18시) </span>
+                                            <span class="day"> 2025-08-18 </span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:fn_board_Move('12971','7708000','BBSMSTR_000000000071');" style="cursor: pointer;">
+                                            <span class="txt"> 2025년 평생교육이용권 사용기관 온라인 모니터링 실시 및 협조 안내 </span>
+                                            <span class="day"> 2025-08-08 </span>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="javascript:fn_board_Move('11135','7708000','BBSMSTR_000000000071');" style="cursor: pointer;">
+                                            <span class="txt"> 2025년 평생교육이용권 사용기관 등록 및 업무 매뉴얼 배포 안내 </span>
+                                            <span class="day"> 2025-07-11 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="more-btn" onclick="fn_move_notice()">
+                            <span class="blind">공지사항 더보기</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- 2024-11-18 수정 -->
+                <div class="more-link-area">
+                    <a href="javascript:fn_subPageMove('31100000','/guide/bizVcUser.do','사업안내');" style="cursor: pointer;">평생교육 <br>이용권이란? </a>
+                    <a href="javascript:onClickOnlineCounsel();" style="cursor: pointer;">사용기관 문의사항</a>
+                    <a href="javascript:fn_subPageMove('33200000','/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000011','게시판')" style="cursor: pointer;">자료실</a>
+                </div>
+                <!-- //2024-11-18 수정 -->
+            </div>
+            <!-- </div></div> -->
+        </div>
+        <!-- footer s -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if (isMobileDevice()) {
+                    $("#organSystemSite").hide();
+                }
+            });
+
+            function isMobileDevice() {
+                const userAgent = navigator.userAgent.toLowerCase();
+                return (userAgent.indexOf("mobile") > -1 || userAgent.indexOf("android") > -1 || userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1);
+            }
+        </script>
+        <div class="useVc">
+            <footer class="wrap">
+                <div class="info-content">
+                    <div>
+                        <ul class="foot-logo">
+                            <li>
+                                <img src="https://www.lllcard.kr/images/biz2/logo/footer_logo_2.svg" alt="평생교육이용권 로고">
+                            </li>
+                        </ul>
+                        <span style="display: flex; font-size: 17px; line-height: 27px; font-weight: 500; color: #000000;"> 중앙콜센터 1600-3005 <br> 평일 09:00 ~ 18:00 운영 (점심시간 12:00 ~ 13:00 제외) ※ 주말 및 공휴일 휴무 </span>
+                        <address>
+                            <div>
+                                <!-- 임시주석-가오픈-2024-03-04 -->
+                                <!-- <strong>대표전화 : 1600-3005</strong> -->
+                                <!-- <span>(04520) 서울특별시 중구 청계천로 14 (무교동77)</span> -->
+                            </div>
+                            <div class="flex-col gap-8">
+                                <!-- 임시주석-가오픈-2024-03-04 -->
+                                <!-- <span>평일 09시~18시 운영(점심시간 12:00~13:00 제외)</span> -->
+                                <!-- <span>주말 및 공휴일 휴무</span> -->
+                            </div>
+                        </address>
+                        <div class="family-select-lg custom-select-box">
+                            <button class="custom-select-open">관련 사이트</button>
+                            <ul class="family-site-list custom-select-list">
+                                <!-- 2025.03.19 순서 및 명칭 변경 -->
+                                <!-- <li><a href="http://www.moe.go.kr" target="_blank">교육부</a></li><li><a href="http://www.nile.or.kr" target="_blank">국가평생교육진흥원</a></li><li><a href="http://www.lifelongedu.go.kr" target="_blank">평생학습포털 늘배움</a></li><li><a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank">학점은행제</a></li><li><a href="https://www.all.go.kr" target="_blank">평생학습계좌제</a></li><li><a href="http://www.cbinfo.or.kr" target="_blank">학점은행제 정보공시제(알리미)</a></li><li><a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank">국가평생교육진흥원 독학학위제</a></li> -->
+                                <li>
+                                    <a href="https://www.moe.go.kr/main.do?s=moe" target="_blank" style="cursor: pointer;">교육부</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.nile.or.kr/index.do" target="_blank" style="cursor: pointer;">국가평생교육진흥원</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.all.go.kr" target="_blank" style="cursor: pointer;">온국민평생배움터</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.cb.or.kr/creditbank/base/cdMain.do" target="_blank" style="cursor: pointer;">학점은행제</a>
+                                </li>
+                                <li>
+                                    <a href="https://bdes.nile.or.kr:444/nile/base/bdesMain.do" target="_blank" style="cursor: pointer;">독학학위제</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.cbinfo.or.kr" target="_blank" style="cursor: pointer;">학점은행제 정보공시제(알리미)</a>
+                                </li>
+                                <li id="organSystemSite">
+                                    <a href="https://www.all.go.kr" target="_blank" style="cursor: pointer;">평생학습계좌제</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="link-area gap-10">
+                        <div class="link-box">
+                            <a onclick="fn_subPageMove('7101000', '/main/useTerm.do'); return false;" style="cursor: pointer;">이용약관</a>
+                            <a class="on" onclick="fn_subPageMove('7102000', '/main/usePrivate.do'); return false;" style="cursor: pointer;">개인정보처리방침</a>
+                        </div>
+                        <!-- <span class="copy">
+                COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED.
+            </span> -->
+                        <span class="copy"> 국가평생교육진흥원 <br>(07800) K스퀘어 마곡 타워1 4층·5층 및 8층(서울 강서구 마곡중앙로 105-7) <br>COPYRIGHT 2024. NATIONAL INSTITUTE FOR LIFELONG EDUCATION. ALL RIGHTS RESERVED. </span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- footer e -->
+        <form name="selectOne">
+            <input name="menuNo" type="hidden">
+            <input name="chkURL" type="hidden">
+            <input name="privNum" type="hidden">
+            <input name="topMenuNm" type="hidden">
+            <!--2021.10.22 top메뉴 현재 표시-->
+        </form>
+        <form name="selectTwo">
+            <input name="menuNo" type="hidden">
+            <input name="nttId" type="hidden">
+            <input name="bbsId" type="hidden">
+            <input name="topMenuNm" type="hidden">
+            <!--2021.10.22 top메뉴 현재 표시-->
+        </form>
+    </body>
+</html>
