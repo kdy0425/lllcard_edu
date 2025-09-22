@@ -29,6 +29,10 @@
         <link rel="stylesheet" href="css/biz2/style.css">
         <link rel="stylesheet" href="https://www.lllcard.kr/css/biz2/swiper-bundle.min.css">
         <link rel="stylesheet" type="text/css" href="https://www.lllcard.kr/css/biz/jquery-ui.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css"><!-- 임시폰트 cdn -->
+        <style>
+            *{font-family: 'KoPub Dotum' !important;}/*임시폰트 세팅*/
+        </style>
         <script src="https://www.lllcard.kr/js/base/jquery/jquery.1.8.2.min.js"></script>
         <script src="https://www.lllcard.kr/js/biz2/swiper-bundle.min.js"></script>
         <script src="https://www.lllcard.kr/js/base/jquery/form/jquery.form.js"></script>
@@ -500,18 +504,19 @@ function actionLogout(){
             <!-- <div class="main">메인일시 .main//
 	<div class="container wrap"> -->
             <div class="main-info-content">
+                <div class="main_member">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#00ADB2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M16 28C16 28 19 32 24 32C29 32 32 28 32 28" stroke="#00ADB2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M18 18H18.02" stroke="#00ADB2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M30 18H30.02" stroke="#00ADB2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/> </svg>  
+                    <strong>국평원 홍길동</strong>님, 환영합니다.
+                </div>
                 <div class="link-area">
                     <div class="link-box">
-                        <div class="link login-btn">
-                            <p class="agency-info">(영업중지)서울_트라이언_테스트2</p>
-                            <p class="agency-info user-name">
-                                <span class="col-pri">이광운</span>님, 환영합니다.
-                            </p>
-                        </div>
                         <button class="tikcet-btn link" onclick="onClickOrganInfoMngBtn()">
                             <span class="txt">기관정보 관리</span>
                         </button>
-                        <button class="use-btn link" onclick="fn_subPageMove('32300000','/edu/educationList.do','이용권 사용기관');">
+                         <button class="use-btn link" onclick="onClickOrganInfoMngBtn()">
+                            <span class="txt">이용권 사용내역</span>
+                        </button>
+                        <button class="edu-btn link" onclick="fn_subPageMove('32300000','/edu/educationList.do','이용권 사용기관');">
                             <span class="txt">교육과정 정보</span>
                         </button>
                     </div>
@@ -549,7 +554,7 @@ function actionLogout(){
                 <!-- 2024-11-18 수정 -->
                 <div class="more-link-area">
                     <a href="javascript:fn_subPageMove('31100000','/guide/bizVcUser.do','사업안내');" style="cursor: pointer;">평생교육 <br>이용권이란? </a>
-                    <a href="javascript:onClickOnlineCounsel();" style="cursor: pointer;">사용기관 문의사항</a>
+                    <a href="javascript:onClickOnlineCounsel();" style="cursor: pointer;">사용기관 <br>문의사항</a>
                     <a href="javascript:fn_subPageMove('33200000','/cop/bbs/selectBoardList.do?bbsId=BBSMSTR_000000000011','게시판')" style="cursor: pointer;">자료실</a>
                 </div>
                 <!-- //2024-11-18 수정 -->
